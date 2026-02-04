@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buenas Letras | Inicio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a class="logo" href="index.html">Buenas Letras</a>
+
+      <input type="checkbox" id="navToggle" class="nav__toggle" />
+      <label for="navToggle" class="nav__btn" aria-label="Abrir menú">☰</label>
+
+      <nav class="nav">
+        <a class="nav__link nav__link--active" href="index.html">Inicio</a>
+        <a class="nav__link" href="html/about.html">Sobre la librería</a>
+        <a class="nav__link" href="html/contact.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <h1>Encontrá tu próximo libro</h1>
+          <p>
+            En Buenas Letras vas a encontrar clásicos, juveniles y material académico.
+            Explorá el catálogo y consultanos lo que necesites.
+          </p>
+
+          <form class="search" action="#" method="get">
+            <label class="sr-only" for="q">Buscar</label>
+            <input id="q" type="text" placeholder="Buscar por título, autor o categoría..." />
+            <button type="submit">Buscar</button>
+          </form>
+
+          <div class="chips">
+            <span class="chips__label">Sugerencias:</span>
+            <span class="chip">Clásicos</span>
+            <span class="chip">Juvenil</span>
+            <span class="chip">Académicos</span>
+            <span class="chip">Fantasía</span>
+          </div>
+        </div>
+
+        <div class="hero__card">
+          <h2 class="hero__card-title">Horarios</h2>
+          <ul class="list">
+            <li><strong>Lun a Vie:</strong> 10:00 - 19:00</li>
+            <li><strong>Sábados:</strong> 10:00 - 14:00</li>
+            <li><strong>Domingos:</strong> Cerrado</li>
+          </ul>
+
+          <a class="btn" href="html/contact.html">Hacer una consulta</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Libros destacados</h2>
+          <p>Una selección para empezar. </p>
+        </div>
+
+        <div class="books">
+          <article class="book">
+            <img
+              src="https://covers.openlibrary.org/b/isbn/9788420642066-L.jpg"
+              alt="Portada del libro Ficciones"
+              loading="lazy"
+            />
+            <h3>Ficciones</h3>
+            <p class="muted">J. L. Borges</p>
+          </article>
+
+          <article class="book">
+            <img
+              src="https://covers.openlibrary.org/b/isbn/9788498387076-L.jpg"
+              alt="Portada del libro El Hobbit"
+              loading="lazy"
+            />
+            <h3>El Hobbit</h3>
+            <p class="muted">J. R. R. Tolkien</p>
+          </article>
+
+          <article class="book">
+            <img
+              src="https://covers.openlibrary.org/b/isbn/9788420674227-L.jpg"
+              alt="Portada del libro Breve historia de la economía"
+              loading="lazy"
+            />
+            <h3>Breve historia de la economía</h3>
+            <p class="muted">Niall Kishtainy</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container cta">
+        <div>
+          <h2>¿Buscás una recomendación?</h2>
+          <p>Contanos qué te gusta y te armamos una lista rápida.</p>
+        </div>
+        <a class="btn btn--outline" href="html/contact.html">Contactar</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>© 2026 Buenas Letras</p>
+      <p class="muted">Proyecto curso Desarrollo Web</p>
+    </div>
+  </footer>
+</body>
+</html>

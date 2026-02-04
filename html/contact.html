@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buenas Letras | Contacto</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a class="logo" href="../index.html">Buenas Letras</a>
+
+      <input type="checkbox" id="navToggle" class="nav__toggle" />
+      <label for="navToggle" class="nav__btn" aria-label="Abrir menú">☰</label>
+
+      <nav class="nav">
+        <a class="nav__link" href="../index.html">Inicio</a>
+        <a class="nav__link" href="about.html">Sobre la librería</a>
+        <a class="nav__link nav__link--active" href="contact.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section__head">
+        <h1>Contacto</h1>
+        <p>Dejanos tu consulta. Respondemos lo antes posible.</p>
+      </div>
+
+      <div class="two-cols">
+        <form class="card form" action="#" method="post">
+          <label>
+            Nombre
+            <input type="text" name="name" placeholder="Tu nombre" required />
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" placeholder="tucorreo@ejemplo.com" required />
+          </label>
+
+          <label>
+            Mensaje
+            <textarea name="message" rows="5" placeholder="¿En qué te ayudamos?" required></textarea>
+          </label>
+
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+
+        <aside class="card">
+          <h2>Información</h2>
+          <ul class="list">
+            <li><strong>Dirección:</strong> Av. 25 de Mayo 699</li>
+            <li><strong>Teléfono:</strong> 1134960978</li>
+            <li><strong>Email:</strong> libreriabl@gmail.com</li>
+          </ul>
+
+          <h3>Horarios</h3>
+          <p class="muted">
+            Lun a Vie: 10:00 - 19:00<br />
+            Sáb: 10:00 - 14:00
+          </p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>© 2026 Buenas Letras</p>
+      <p class="muted">Consultas · Pedidos · Recomendaciones</p>
+    </div>
+  </footer>
+</body>
+</html>
