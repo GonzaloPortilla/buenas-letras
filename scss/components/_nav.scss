@@ -1,0 +1,57 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.nav {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+
+  &__toggle { display: none; }
+
+  &__btn {
+    font-size: 1.35rem;
+    cursor: pointer;
+    user-select: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid $line;
+    background: $white;
+
+    &:hover { background: $soft; }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $text;
+    padding: 8px 10px;
+    border-radius: 10px;
+
+    &:hover { background: $soft; }
+
+    &--active {
+      font-weight: 700;
+      color: $primary-dark;
+      background: rgba(14, 165, 233, 0.12);
+    }
+  }
+}
+
+.nav__toggle:checked + .nav__btn + .nav {
+  display: flex;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  padding: 12px;
+  box-shadow: $shadow;
+}
+
+@include respond-md {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+    &__btn { display: none; }
+    &__link { padding: 8px 12px; }
+  }
+}

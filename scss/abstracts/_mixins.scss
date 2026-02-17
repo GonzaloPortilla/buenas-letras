@@ -1,0 +1,26 @@
+@use "variables" as *;
+
+@mixin container {
+  max-width: $container;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@mixin focus-ring($color: $primary) {
+  outline: none;
+  border-color: $color;
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.18);
+}
+
+@mixin respond-md {
+  @media (min-width: $bp-md) {
+    @content;
+  }
+}
+
+@mixin flex($justify: space-between, $align: center, $gap: 16px) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}

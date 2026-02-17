@@ -1,0 +1,20 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.form {
+  label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid $line;
+    border-radius: 10px;
+    margin-top: 6px;
+
+    &:focus { @include focus-ring($primary); }
+  }
+}

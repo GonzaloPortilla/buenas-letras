@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid $line;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+
+  &__content {
+    @include flex(space-between, center, 16px);
+    min-height: 64px;
+  }
+}
+
+.logo {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: $bg;
+
+  &::before {
+    content: "●";
+    color: $primary;
+    margin-right: 8px;
+  }
+}

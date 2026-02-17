@@ -1,0 +1,27 @@
+@use "../abstracts/variables" as *;
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: $primary;
+  color: white;
+  font-weight: 800;
+  border: 1px solid $primary;
+  transition: background 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    background: $primary-dark;
+    border-color: $primary-dark;
+  }
+
+  &--outline {
+    background: transparent;
+    color: $primary-dark;
+    border: 1px solid $primary-dark;
+
+    &:hover { background: rgba(14,165,233,0.12); }
+  }
+}

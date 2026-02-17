@@ -1,0 +1,18 @@
+@use "variables" as *;
+
+%card {
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(2, 8, 23, 0.06);
+}
+
+%hover-lift {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow;
+  }
+}
