@@ -8,20 +8,76 @@ body {
   background: linear-gradient(180deg, #f8fafc 0%, #ffffff 60%);
 }
 
-.container { @include container; }
+.navbar {
+  background: $white !important;
+  box-shadow: 0 2px 10px rgba(2, 8, 23, 0.06);
+}
 
-.muted { color: $muted; }
+.navbar-brand {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: $bg !important;
+}
 
-.sr-only {
-  position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
+.nav-link {
+  color: $muted !important;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 8px 12px !important;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nav-link:hover {
+  background: rgba(14, 165, 233, 0.08);
+  color: $primary-dark !important;
+}
+
+.nav-link.active {
+  color: $primary-dark !important;
+  background: rgba(14, 165, 233, 0.12);
+  font-weight: 700;
+}
+
+.bl-muted {
+  color: $muted;
+}
+
+.bl-list {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.bl-section {
+  padding: 56px 0;
+}
+
+.bl-section__head {
+  margin-bottom: 28px;
+}
+
+.bl-section__head h1,
+.bl-section__head h2 {
+  margin-bottom: 10px;
+}
+
+.bl-section__head p {
+  margin: 0;
+  color: $muted;
+  max-width: 70ch;
+}
+
+.bl-section--soft {
+  background: radial-gradient(900px 220px at 10% 10%, rgba(14, 165, 233, 0.12), transparent), $soft;
+  border-top: 1px solid $line;
+  border-bottom: 1px solid $line;
 }
 
 @each $name, $value in $spacings {
-  .p-#{$name} { padding: $value; }
-  .mt-#{$name} { margin-top: $value; }
+  .bl-p-#{$name} {
+    padding: $value;
+  }
+
+  .bl-mt-#{$name} {
+    margin-top: $value;
+  }
 }

@@ -1,20 +1,48 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
-.form {
+.bl-form {
   label {
     display: block;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+    color: $text;
   }
 
-  input, textarea {
+  input,
+  textarea {
     width: 100%;
-    padding: 10px 12px;
+    padding: 12px 14px;
     border: 1px solid $line;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-top: 6px;
+    background: $white;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
 
-    &:focus { @include focus-ring($primary); }
+    &:focus {
+      @include focus-ring($primary);
+    }
   }
+
+  textarea {
+    resize: vertical;
+    min-height: 140px;
+  }
+
+  .bl-btn {
+    margin-top: 8px;
+  }
+}
+
+.bl-card h2 {
+  margin-bottom: 12px;
+}
+
+.bl-card h3 {
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.bl-card .bl-list li {
+  margin-bottom: 8px;
 }

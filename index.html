@@ -3,121 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Buenas Letras | Inicio</title>
+
+  <title>Buenas Letras | Librería online</title>
+  <meta
+    name="description"
+    content="Buenas Letras es una librería online con clásicos, literatura juvenil y libros académicos. Encontrá tu próxima lectura."
+  />
+  <meta
+    name="keywords"
+    content="librería, libros, clásicos, literatura juvenil, libros académicos, Buenas Letras"
+  />
+  <meta name="author" content="Gonza" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-  <header class="header">
-    <div class="container header__content">
-      <a class="logo" href="index.html">Buenas Letras</a>
+  <header>
+    <nav class="navbar navbar-expand-md bg-body-tertiary border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Buenas Letras</a>
 
-      <input type="checkbox" id="navToggle" class="nav__toggle" />
-      <label for="navToggle" class="nav__btn" aria-label="Abrir menú">☰</label>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Abrir menú de navegación"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <nav class="nav">
-        <a class="nav__link nav__link--active" href="index.html">Inicio</a>
-        <a class="nav__link" href="html/about.html">Sobre la librería</a>
-        <a class="nav__link" href="html/contact.html">Contacto</a>
-      </nav>
-    </div>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html/about.html">Sobre la librería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="html/contact.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__text">
-          <h1>Encontrá tu próximo libro</h1>
-          <p>
-            En Buenas Letras vas a encontrar clásicos, juveniles y material académico.
-            Explorá el catálogo y consultanos lo que necesites.
-          </p>
+    <section class="bl-hero py-5">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-md-7">
+            <div class="bl-hero__text">
+              <h1>Encontrá tu próximo libro</h1>
+              <p>
+                En Buenas Letras vas a encontrar clásicos, juveniles y material académico.
+                Explorá el catálogo y consultanos lo que necesites.
+              </p>
 
-          <form class="search" action="#" method="get">
-            <label class="sr-only" for="q">Buscar</label>
-            <input id="q" type="text" placeholder="Buscar por título, autor o categoría..." />
-            <button type="submit">Buscar</button>
-          </form>
+              <form class="bl-search mt-3" action="#" method="get">
+                <label class="visually-hidden" for="q">Buscar</label>
+                <input
+                  id="q"
+                  type="text"
+                  placeholder="Buscar por título, autor o categoría..."
+                />
+                <button type="submit">Buscar</button>
+              </form>
 
-          <div class="chips">
-            <span class="chips__label">Sugerencias:</span>
-            <span class="chip">Clásicos</span>
-            <span class="chip">Juvenil</span>
-            <span class="chip">Académicos</span>
-            <span class="chip">Fantasía</span>
+              <div class="bl-chips mt-3">
+                <span class="bl-chips__label">Sugerencias:</span>
+                <span class="bl-chip">Clásicos</span>
+                <span class="bl-chip">Juvenil</span>
+                <span class="bl-chip">Académicos</span>
+                <span class="bl-chip">Fantasía</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <aside class="bl-card">
+              <h2 class="h4">Horarios</h2>
+              <ul class="bl-list">
+                <li><strong>Lun a Vie:</strong> 10:00 - 19:00</li>
+                <li><strong>Sábados:</strong> 10:00 - 14:00</li>
+                <li><strong>Domingos:</strong> Cerrado</li>
+              </ul>
+
+              <a class="bl-btn" href="html/contact.html">Hacer una consulta</a>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container mb-5">
+      <div
+        id="booksCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner rounded shadow-sm">
+          <div class="carousel-item active">
+            <img
+              src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80"
+              class="d-block w-100"
+              alt="Estantería llena de libros en una librería"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80"
+              class="d-block w-100"
+              alt="Libros abiertos y apilados sobre una mesa"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=80"
+              class="d-block w-100"
+              alt="Persona leyendo un libro en un espacio tranquilo"
+            />
           </div>
         </div>
 
-        <div class="hero__card">
-          <h2 class="hero__card-title">Horarios</h2>
-          <ul class="list">
-            <li><strong>Lun a Vie:</strong> 10:00 - 19:00</li>
-            <li><strong>Sábados:</strong> 10:00 - 14:00</li>
-            <li><strong>Domingos:</strong> Cerrado</li>
-          </ul>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#booksCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
 
-          <a class="btn" href="html/contact.html">Hacer una consulta</a>
-        </div>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#booksCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
       </div>
     </section>
-
-    <section class="section">
+    <section class="bl-section">
       <div class="container">
-        <div class="section__head">
+        <div class="bl-section__head">
           <h2>Libros destacados</h2>
-          <p>Una selección para empezar. </p>
+          <p>Una selección para empezar.</p>
         </div>
 
-        <div class="books">
-          <article class="book">
-            <img
-              src="https://covers.openlibrary.org/b/isbn/9788420642066-L.jpg"
-              alt="Portada del libro Ficciones"
-              loading="lazy"
-            />
-            <h3>Ficciones</h3>
-            <p class="muted">J. L. Borges</p>
-          </article>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-4">
+            <article class="bl-book">
+              <img
+                src="https://covers.openlibrary.org/b/isbn/9788420642066-L.jpg"
+                alt="Portada del libro Ficciones"
+                loading="lazy"
+              />
+              <h3>Ficciones</h3>
+              <p class="bl-muted">J. L. Borges</p>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <article class="bl-book">
+              <img
+                src="https://covers.openlibrary.org/b/isbn/9788498387076-L.jpg"
+                alt="Portada del libro El Hobbit"
+                loading="lazy"
+              />
+              <h3>El Hobbit</h3>
+              <p class="bl-muted">J. R. R. Tolkien</p>
+            </article>
+          </div>
 
-          <article class="book">
-            <img
-              src="https://covers.openlibrary.org/b/isbn/9788498387076-L.jpg"
-              alt="Portada del libro El Hobbit"
-              loading="lazy"
-            />
-            <h3>El Hobbit</h3>
-            <p class="muted">J. R. R. Tolkien</p>
-          </article>
-
-          <article class="book">
-            <img
-              src="https://covers.openlibrary.org/b/isbn/9788420674227-L.jpg"
-              alt="Portada del libro Breve historia de la economía"
-              loading="lazy"
-            />
-            <h3>Breve historia de la economía</h3>
-            <p class="muted">Niall Kishtainy</p>
-          </article>
+          <div class="col-sm-6 col-lg-4">
+            <article class="bl-book">
+              <img
+                src="https://covers.openlibrary.org/b/isbn/9788420674227-L.jpg"
+                alt="Portada del libro Breve historia de la economía"
+                loading="lazy"
+              />
+              <h3>Breve historia de la economía</h3>
+              <p class="bl-muted">Niall Kishtainy</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
-
-    <section class="section section--soft">
-      <div class="container cta">
-        <div>
-          <h2>¿Buscás una recomendación?</h2>
-          <p>Contanos qué te gusta y te armamos una lista rápida.</p>
+    <section class="bl-section bl-section--soft">
+      <div class="container">
+        <div class="bl-cta">
+          <div>
+            <h2>¿Buscás una recomendación?</h2>
+            <p>Contanos qué te gusta y te armamos una lista rápida.</p>
+          </div>
+          <a class="bl-btn bl-btn--outline" href="html/contact.html">Contactar</a>
         </div>
-        <a class="btn btn--outline" href="html/contact.html">Contactar</a>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__content">
+  <footer class="bl-footer">
+    <div class="container bl-footer__content">
       <p>© 2026 Buenas Letras</p>
-      <p class="muted">Proyecto curso Desarrollo Web</p>
+      <p class="bl-muted">Proyecto curso Desarrollo Web</p>
     </div>
   </footer>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
 </body>
 </html>

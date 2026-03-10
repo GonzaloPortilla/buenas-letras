@@ -1,11 +1,24 @@
-.two-cols {
-  display: grid;
-  gap: 18px;
+@use "../abstracts/variables" as *;
+
+.bl-card h2 {
+  margin-bottom: 12px;
+  font-size: 2.1rem;
 }
 
-@media (min-width: 768px) {
-  .two-cols {
-    grid-template-columns: 1.2fr 0.8fr;
-    align-items: start;
-  }
+.bl-card h3 {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+}
+
+.bl-card p {
+  margin-bottom: 0;
+}
+
+.bl-card .bl-list li {
+  margin-bottom: 6px;
+}
+
+.bl-card .bl-btn {
+  margin-top: 14px;
 }
